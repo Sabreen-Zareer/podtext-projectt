@@ -1,0 +1,24 @@
+.info-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #0056b3;
+    color: white;
+    font-size: xx-large;
+    height: 180px;
+    width: 1500px;
+    
+  }
+  
+  .info-column {
+    text-align: center;
+    max-width: 30%;
+  }
+  
+  .info-column h3 {
+    font-size: 1.5rem;
+  }
+  
+  .info-column p {
+    font-size: 1rem;
+  }

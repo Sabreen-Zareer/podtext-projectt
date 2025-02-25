@@ -31,7 +31,7 @@ function Login() {
                 required
               />
               <span className="toggle-password" onClick={togglePasswordVisibility}>
-                {showPassword ? "" : ""}
+                {showPassword ? "🙈" : "👁️"}
               </span>
             </div>
 
