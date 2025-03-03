@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import "./App.css";
-import Header from "./components/Header/Header";
-import MainSection from "./components/MainSection/MainSection";
-import Features from "./components/Features/Features";
-import InfoBox from "./components/InfoBox/InfoBox";
-import Login from "./components/Login/Login"; 
-import Signup from "./components/Signup/Signup"; 
-import Dashboard from "./components/Dashboard/Dashboard"; // استيراد صفحة Dashboard
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Header from './components/Header/Header';
+import MainSection from './components/MainSection/MainSection';
+import Features from './components/Features/Features';
+import InfoBox from './components/InfoBox/InfoBox';
+import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+import Dashboard from './components/Dashboard/Dashboard';
+import Chatting from './components/Chatting/Chatting';
+import FileUploadModal from './components/FileUploadModal/FileUploadModal';
+import VideoTranscription from './components/VideoTranscription/VideoTranscription';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
@@ -46,7 +50,15 @@ function App() {
       {currentPage !== "login" && currentPage !== "signup" && currentPage !== "dashboard" && (
         <Header setCurrentPage={setCurrentPage} />
       )}
-      {renderPage()}
+      <Routes>
+        <Route path="/" element={renderPage()} />
+        <Route path="/login" element={<Login setCurrentPage={setCurrentPage} />} />
+        <Route path="/signup" element={<Signup setCurrentPage={setCurrentPage} />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/chatting" element={<Chatting />} />
+        <Route path="/file-upload" element={<FileUploadModal />} />
+        <Route path="/video-transcription" element={<VideoTranscription />} />
+      </Routes>
     </div>
   );
 }

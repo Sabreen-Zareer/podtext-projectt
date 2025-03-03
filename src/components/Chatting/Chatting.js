@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
-import "./chatting.css";
+import "./Chatting.css";
 
 const Chatting = () => {
   const [messages, setMessages] = useState([]);
@@ -14,8 +14,6 @@ const Chatting = () => {
       setInput("");
     }
   };
-
-  // تمرير تلقائي عند إرسال الرسالة
   useEffect(() => {
     if (chatRef.current) {
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
@@ -24,9 +22,7 @@ const Chatting = () => {
 
   return (
     <div className="chat-container">
-      {/* المحتوى الرئيسي */}
       <div className="main-content">
-        {/* شريط البحث */}
         <div className="top-bar">
           <div className="search-container">
             <FaSearch className="search-icon" />
@@ -34,12 +30,11 @@ const Chatting = () => {
           </div>
         </div>
 
-        {/* منطقة الدردشة */}
         <main className="chat-main">
           <h2 className="chat-title">Chatty AI</h2>
           <p className="chat-subtitle">أنا هنا لمساعدتك في كل ما تحتاجه، دعنا نتحدث!</p>
 
-          {/* الرسائل */}
+     
           <div className="messages-box" ref={chatRef}>
             {messages.map((msg, index) => (
               <div key={index} className={`message ${msg.sender === "user" ? "user-message" : "bot-message"}`}>
@@ -47,8 +42,6 @@ const Chatting = () => {
               </div>
             ))}
           </div>
-
-          {/* صندوق الكتابة */}
           <div className="input-box">
             <input
               type="text"
@@ -62,8 +55,6 @@ const Chatting = () => {
           </div>
         </main>
       </div>
-
-      {/* الشريط الجانبي */}
       <aside className="sidebar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />

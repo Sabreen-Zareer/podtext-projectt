@@ -20,9 +20,15 @@ const Dashboard = () => {
     }
   }, [navigate]);
 
+  const handleAddFileClick = () => {
+    navigate("/file-upload");
+  };
+
+  const handleChatClick = () => {
+    navigate("/chatting");
+  };
   return (
     <div className="dashboard-container">
-     
       <div className="sidebar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
@@ -31,12 +37,12 @@ const Dashboard = () => {
           <li className="active">الرئيسية</li>
           <li>الملفات</li>
           <li>الإعدادات</li>
+          <li onClick={handleChatClick}>الشات</li>
         </ul>
       </div>
       <div className="main-content">
         <div className="top-bar">
           <div className="profile-container">
-            
             <img src={profilePic} alt="User" className="profile-pic" />
           </div>
           <div className="search-container">
@@ -52,7 +58,7 @@ const Dashboard = () => {
           <img src={avg} alt="توزيع الأفراد ذوي الإعاقة حسب الجنس" className="chart-image" />
         </div>
 
-        <button className="add-file">
+        <button className="add-file" onClick={handleAddFileClick}>
           <FaPlus /> إضافة ملف
         </button>
       </div>

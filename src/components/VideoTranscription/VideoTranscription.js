@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./button";
+import Button from "../Button/Button";
 import { FaSearch } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
 import "./VideoTranscription.css";
