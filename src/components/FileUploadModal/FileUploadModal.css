@@ -97,7 +97,7 @@
   padding: 30px;
   border-radius: 12px;
   width: 500px;
-  text-align: right;
+  text-align: center;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -107,19 +107,20 @@
   font-size: 20px;
   font-weight: bold;
   color: #012970;
+  text-align: center; /* توسيط العنوان */
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width:200px;
-  height: 200px;
-  border-radius: 20px;
+  width: 100%;
 }
 
 .input-field {
   padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 14px;
@@ -163,6 +164,7 @@
   transition: 0.3s;
   font-size: 16px;
   font-weight: bold;
+  width: 100%;
 }
 
 .submit-button:hover {
