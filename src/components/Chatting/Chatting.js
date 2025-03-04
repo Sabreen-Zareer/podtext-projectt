@@ -14,6 +14,7 @@ const Chatting = () => {
       setInput("");
     }
   };
+
   useEffect(() => {
     if (chatRef.current) {
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
@@ -31,10 +32,12 @@ const Chatting = () => {
         </div>
 
         <main className="chat-main">
-          <h2 className="chat-title">Chatty AI</h2>
-          <p className="chat-subtitle">أنا هنا لمساعدتك في كل ما تحتاجه، دعنا نتحدث!</p>
-
-     
+          <div className="chat-header">
+            <h2 className="chat-title">Chatty AI</h2>
+            <p className="chat-subtitle">أنا هنا لمساعدتك في كل ما</p>
+            <p className="chat-subtitle"> تحتاجه، دعنا نتحدث !</p>
+          </div>
+          
           <div className="messages-box" ref={chatRef}>
             {messages.map((msg, index) => (
               <div key={index} className={`message ${msg.sender === "user" ? "user-message" : "bot-message"}`}>
@@ -42,6 +45,7 @@ const Chatting = () => {
               </div>
             ))}
           </div>
+          
           <div className="input-box">
             <input
               type="text"

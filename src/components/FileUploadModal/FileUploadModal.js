@@ -28,8 +28,9 @@ export default function FileUploadModal() {
               <h2 className="modal-title">إضافة ملف</h2>
               <div className="modal-content">
                 <input type="text" placeholder="اكتب اسم الفيديو هنا" className="input-field" />
-                <input type="text" placeholder="اكتب هنا تصنيف الفيديو" className="input-field" />
-                <input type="date" className="input-field" />
+                <input type="text" placeholder="اكتب تصنيف الفيديوا هنا " className="input-field" />
+                <input type="text" placeholder="تاريخ الاضافة" className="input-field" />
+            
                 <div className="upload-area">
                   <FaCloudUploadAlt className="upload-icon" size={30} />
                   <p className="upload-text">قم بتحميل ملف MP3</p>
