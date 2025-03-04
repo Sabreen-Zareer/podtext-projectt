@@ -1,7 +1,7 @@
 /* الحاوية الرئيسية */
 .file-upload-container {
   display: flex;
-  flex-direction: row-reverse; /* جعل الشريط الجانبي على اليمين */
+  flex-direction: row-reverse; 
   height: 100vh;
   background-color: #f9f9f9;
 }
@@ -79,7 +79,7 @@
   color: #666;
 }
 
-/* نافذة رفع الملفات */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -107,7 +107,7 @@
   font-size: 20px;
   font-weight: bold;
   color: #012970;
-  text-align: center; /* توسيط العنوان */
+  text-align: center; 
 }
 
 .modal-content {
@@ -171,7 +171,7 @@
   background: #014a9c;
 }
 
-/* زر إغلاق النافذة */
+
 .close-button {
   background: none;
   border: none;

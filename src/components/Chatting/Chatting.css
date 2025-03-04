@@ -114,16 +114,19 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 .chat-title {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
 }
 
 .chat-subtitle {
   color: gray;
   margin-top: 5px;
+  text-align: center;
 }
 
 /* 🔹 صندوق الرسائل */
