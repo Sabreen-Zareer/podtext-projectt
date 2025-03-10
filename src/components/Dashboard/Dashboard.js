@@ -39,6 +39,7 @@ const Dashboard = () => {
           <li>الملفات</li>
           <li>الإعدادات</li>
           <li onClick={handleChatClick}>الشات</li>
+          <li onClick={handleChatClick}>التلخيص</li>
         </ul>
       </div>
       <div className="main-content">
