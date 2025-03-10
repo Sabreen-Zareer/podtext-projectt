@@ -4,8 +4,8 @@
   align-items: center;
   padding: 10px;
   background-color: #f4f4f4;
-  width: 99%;
-  height: 30%;
+  width: 100%;
+  height: 80%;
 }
 
 .logo-container {
@@ -38,22 +38,24 @@
 .auth-buttons {
   display: flex;
   gap: 10px;
-  margin-right: auto; 
+  margin-right: 20px; 
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 150px;
-
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 8px 50px;
   border: none;
+  display: inline-block;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+
 }
 
 .btn.login {
+  
   background-color: #007BFF;
   color: white;
 }

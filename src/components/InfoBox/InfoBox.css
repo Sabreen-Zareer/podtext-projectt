@@ -1,3 +1,4 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 .info-box {
     display: flex;
     justify-content: space-around;
@@ -21,4 +22,19 @@
   
   .info-column p {
     font-size: 1rem;
+  }
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 100px;
+  }
+  
+  .social-icons i {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .social-icons i:hover {
+    color: #007bff;
   }

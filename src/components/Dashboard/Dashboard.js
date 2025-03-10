@@ -27,6 +27,7 @@ const Dashboard = () => {
   const handleChatClick = () => {
     navigate("/chatting");
   };
+
   return (
     <div className="dashboard-container">
       <div className="sidebar">
@@ -50,10 +51,15 @@ const Dashboard = () => {
             <input type="text" placeholder="ابحث عن ..." className="search-box" />
           </div>
         </div>
+        <br />
+        <br />
+        <br />
         <div className="stats">
           <img src={nisba} alt="إجمالي عدد الصم" className="stat-image" />
           <img src={nsba} alt="إجمالي عدد المتعلمين" className="stat-image" />
         </div>
+        <br />
+        <br />
         <div className="chart-container">
           <img src={avg} alt="توزيع الأفراد ذوي الإعاقة حسب الجنس" className="chart-image" />
         </div>

@@ -14,7 +14,7 @@ function Header({ setCurrentPage }) {
         </div>
       </div>
       <div className="auth-buttons">
-        <button className="btn login" onClick={() => setCurrentPage("login")}>تسجيل الدخول</button>
+        <button  className="btn login" onClick={() => setCurrentPage("login")}>تسجيل الدخول</button>
         <button className="btn signup" onClick={() => setCurrentPage("signup")}>إنشاء حساب</button>
       </div>
     </header>
