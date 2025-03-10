@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaHome, FaCog, FaPlus } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
+import { TiArrowRepeatOutline } from "react-icons/ti";
 import "./Chatting.css";
 
 const Chatting = () => {
@@ -23,6 +24,21 @@ const Chatting = () => {
 
   return (
     <div className="chat-container">
+      <aside className="sidebar">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
+        <nav className="sidebar-nav">
+          <a href="#" className="sidebar-link active"><FaHome /> الرئيسية</a>
+          <a href="#" className="sidebar-link active">الملفات</a>
+          <a href="#" className="sidebar-link"><FaCog /> الإعدادات</a>
+        </nav>
+        <div>
+        <button className="add-btn"><FaPlus /> إضافة</button>
+        <button className="re-btn"><TiArrowRepeatOutline /></button>
+        </div>
+      </aside>
+
       <div className="main-content">
         <div className="top-bar">
           <div className="search-container">
@@ -34,8 +50,8 @@ const Chatting = () => {
         <main className="chat-main">
           <div className="chat-header">
             <h2 className="chat-title">Chatty AI</h2>
-            <p className="chat-subtitle">أنا هنا لمساعدتك في كل ما</p>
-            <p className="chat-subtitle"> تحتاجه، دعنا نتحدث !</p>
+            <p className="chat-subtitle">أنا هنا لمساعدتك في كل</p>
+            <p className="chat-subtitle"> ما تحتاجه، دعنا نتحدث!</p>
           </div>
           
           <div className="messages-box" ref={chatRef}>
@@ -59,17 +75,6 @@ const Chatting = () => {
           </div>
         </main>
       </div>
-      <aside className="sidebar">
-        <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
-        <nav className="sidebar-nav">
-          <a href="#" className="sidebar-link active">الرئيسية</a>
-          <a href="#" className="sidebar-link">الدردشة</a>
-          <a href="#" className="sidebar-link">الإعدادات</a>
-        </nav>
-        <button className="new-chat-btn">+ محادثة جديدة</button>
-      </aside>
     </div>
   );
 };

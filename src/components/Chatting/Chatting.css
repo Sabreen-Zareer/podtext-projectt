@@ -1,14 +1,11 @@
-/* 🔹 ضبط خلفية الصفحة */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
-/* 🔹 الحاوية الرئيسية */
 .chat-container {
   display: flex;
-  flex-direction: row-reverse;
   height: 100vh;
 }
 
@@ -21,23 +18,40 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .sidebar-title {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .sidebar-link {
   color: white;
   text-decoration: none;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
   transition: 0.3s;
@@ -48,23 +62,48 @@ body {
   background: #014a9c;
 }
 
-.new-chat-btn {
-  background: #014a9c;
+/* 🔹 زر الإضافة */
+.add-btn {
+  background: black;
   color: white;
   font-weight: bold;
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
   transition: background 0.3s;
-  margin-top: auto;
+  margin: auto; /* لضبطه في المنتصف */
+  width: 80%; /* تقليل العرض ليكون متناسقًا */
 }
 
-.new-chat-btn:hover {
-  background: #0165d4;
+.re-btn {
+  background: black;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition: background 0.3s;
+  margin: auto; /* لضبطه في المنتصف */
+  width: 80%;
 }
 
-/* 🔹 المحتوى الرئيسي */
+.add-btn:hover {
+  background: #333; /* لون أفتح عند التمرير */
+}
+.img {
+  background-color: transparent;
+}
+
 .main-content {
   flex-grow: 1;
   padding: 20px;
@@ -104,7 +143,7 @@ body {
   color: #666;
 }
 
-/* 🔹 منطقة الدردشة */
+
 .chat-main {
   background: white;
   padding: 20px;
@@ -129,7 +168,7 @@ body {
   text-align: center;
 }
 
-/* 🔹 صندوق الرسائل */
+
 .messages-box {
   width: 90%;
   max-width: 700px;
@@ -143,7 +182,7 @@ body {
   flex-direction: column;
 }
 
-/* 🔹 الرسائل */
+
 .message {
   padding: 12px;
   margin: 5px 0;
@@ -169,7 +208,7 @@ body {
   border-top-left-radius: 0;
 }
 
-/* 🔹 صندوق الإدخال */
+
 .input-box {
   display: flex;
   width: 90%;
