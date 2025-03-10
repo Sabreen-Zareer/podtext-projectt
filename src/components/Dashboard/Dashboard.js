@@ -27,6 +27,10 @@ const Dashboard = () => {
   const handleChatClick = () => {
     navigate("/chatting");
   };
+  const handlevideoClick = () => {
+    navigate("/videotranscriptions");
+  };
+
   return (
     <div className="dashboard-container">
       <div className="sidebar">
@@ -38,7 +42,7 @@ const Dashboard = () => {
           <li>الملفات</li>
           <li>الإعدادات</li>
           <li onClick={handleChatClick}>الشات</li>
-          <li onClick={handleChatClick}>التلخيص</li>
+          <li onClick={handlevideoClick}>التلخيص</li>
         </ul>
       </div>
       <div className="main-content">
