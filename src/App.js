@@ -11,7 +11,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Chatting from './components/Chatting/Chatting';
 import FileUploadModal from './components/FileUploadModal/FileUploadModal';
 import VideoTranscription from './components/VideoTranscription/VideoTranscription';
-
+import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
 
@@ -58,6 +58,8 @@ function App() {
         <Route path="/chatting" element={<Chatting />} />
         <Route path="/file-upload" element={<FileUploadModal />} />
         <Route path="/video-transcription" element={<VideoTranscription />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} /> 
       </Routes>
     </div>
   );

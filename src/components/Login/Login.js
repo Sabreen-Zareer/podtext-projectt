@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom"; 
 import { FaLock, FaEnvelope } from "react-icons/fa";
 import mainImage from "../../assets/images/main-image.png";
 import logo from "../../assets/images/logo.png";
@@ -33,11 +34,6 @@ const LoginContent = styled.div`
 const Logo = styled.img`
   width: 60px;
   margin-bottom: 15px;
-`;
-
-const Title = styled.h2`
-  font-size: 24px;
-  margin-bottom: 10px;
 `;
 
 const Subtitle = styled.p`
@@ -87,11 +83,12 @@ const Checkbox = styled.input`
   margin-left: 5px;
 `;
 
-const ForgotPassword = styled.button`
+const ForgotPassword = styled(Link)` // تعديل هنا لاستخدام Link
   background: none;
   border: none;
   color: #2575fc;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const LoginButton = styled.button`
@@ -170,7 +167,7 @@ const Login = ({ setCurrentPage }) => {
                 />
                 تذكرني
               </CheckboxLabel>
-              <ForgotPassword>نسيت كلمة المرور؟</ForgotPassword>
+              <ForgotPassword to="/forgot-password">نسيت كلمة المرور؟</ForgotPassword> {/* تعديل هنا */}
             </RememberForgot>
             <LoginButton type="submit">تسجيل الدخول</LoginButton>
           </form>

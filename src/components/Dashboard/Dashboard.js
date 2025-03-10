@@ -25,10 +25,10 @@ const Dashboard = () => {
   };
 
   const handleChatClick = () => {
-    navigate("/chatting");
+    navigate("/Chatting");
   };
   const handlevideoClick = () => {
-    navigate("/videotranscriptions");
+    navigate("/VideoTranscription");
   };
 
   return (
