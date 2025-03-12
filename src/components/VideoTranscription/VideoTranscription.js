@@ -65,9 +65,9 @@ const VideoTranscription = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
-          <a onClick={() => navigate("/")} className="sidebar-link active"> <FaHome />الرئيسية </a>
-          <a onClick={() => navigate("/files")} className="sidebar-link">الملفات</a>
-          <a onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الاعدادات</a>
+          <button onClick={() => navigate("/")} className="sidebar-link active"> <FaHome />الرئيسية </button>
+          <button onClick={() => navigate("/files")} className="sidebar-link">الملفات</button>
+          <button onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الاعدادات</button>
         </nav>
       </aside>
     </div>
