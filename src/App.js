@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import MainSection from './components/MainSection/MainSection';
@@ -11,9 +11,11 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Chatting from './components/Chatting/Chatting';
 import FileUploadModal from './components/FileUploadModal/FileUploadModal';
 import VideoTranscription from './components/VideoTranscription/VideoTranscription';
-import ForgotPassword from './components/ForgotPassword/ForgotPassword';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword'; 
+
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
+  const location = useLocation();
 
   const renderPage = () => {
     if (currentPage === "main") {
@@ -47,7 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      {currentPage !== "login" && currentPage !== "signup" && currentPage !== "dashboard" && (
+      {location.pathname !== "/forgot-password" && location.pathname !== "/login" && location.pathname !== "/signup" && currentPage !== "login" && currentPage !== "signup" && currentPage !== "dashboard" && (
         <Header setCurrentPage={setCurrentPage} />
       )}
       <Routes>
@@ -58,7 +60,6 @@ function App() {
         <Route path="/chatting" element={<Chatting />} />
         <Route path="/file-upload" element={<FileUploadModal />} />
         <Route path="/video-transcription" element={<VideoTranscription />} />
-        <Route path="/" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} /> 
       </Routes>
     </div>

@@ -15,7 +15,7 @@ const LoginContainer = styled.div`
 
 const LoginBox = styled.div`
   display: flex;
-  width: 900px;
+  width: 800px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -27,13 +27,14 @@ const LoginContent = styled.div`
   padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 `;
 
 const Logo = styled.img`
   width: 60px;
   margin-bottom: 15px;
+  align-self: flex-start;
 `;
 
 const Subtitle = styled.p`
@@ -47,9 +48,9 @@ const InputGroup = styled.div`
   align-items: center;
   background: #f5f5f5;
   border-radius: 8px;
-  padding: 10px;
-  width: 100%;
-  margin-bottom: 15px;
+  padding: 15px;
+  width: 130%;
+  margin-bottom: 20px;
 `;
 
 const Input = styled.input`
@@ -57,8 +58,8 @@ const Input = styled.input`
   outline: none;
   background: transparent;
   flex: 1;
-  font-size: 14px;
-  padding: 5px;
+  font-size: 16px;
+  padding: 10px;
 `;
 
 const Icon = styled.div`
@@ -71,7 +72,7 @@ const RememberForgot = styled.div`
   justify-content: space-between;
   width: 100%;
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 `;
 
 const CheckboxLabel = styled.label`
@@ -83,24 +84,27 @@ const Checkbox = styled.input`
   margin-left: 5px;
 `;
 
-const ForgotPassword = styled(Link)` // تعديل هنا لاستخدام Link
+const ForgotPassword = styled(Link)`
   background: none;
   border: none;
   color: #2575fc;
   cursor: pointer;
   text-decoration: none;
+ text-align: right;
+ margin-left: -50px;
 `;
 
 const LoginButton = styled.button`
-  width: 100%;
+  width: 130%;
   background: #2575fc;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 10px;
 
   &:hover {
     background: #1b5fcf;
@@ -167,7 +171,7 @@ const Login = ({ setCurrentPage }) => {
                 />
                 تذكرني
               </CheckboxLabel>
-              <ForgotPassword to="/forgot-password">نسيت كلمة المرور؟</ForgotPassword> {/* تعديل هنا */}
+              <ForgotPassword to="/forgot-password">نسيت كلمة المرور؟</ForgotPassword>
             </RememberForgot>
             <LoginButton type="submit">تسجيل الدخول</LoginButton>
           </form>

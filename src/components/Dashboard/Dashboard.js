@@ -44,10 +44,11 @@ const Dashboard = () => {
       </div>
       <div className="main-content">
         <div className="top-bar">
+      
+          <div className="search-container">
           <div className="profile-container">
             <img src={profilePic} alt="User" className="profile-pic" />
           </div>
-          <div className="search-container">
             <IoMdSearch className="search-icon" />
             <input type="text" placeholder="ابحث عن ..." className="search-box" />
           </div>
