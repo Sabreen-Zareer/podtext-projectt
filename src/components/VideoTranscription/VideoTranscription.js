@@ -1,15 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 import Button from "../Button/Button";
 import { FaSearch } from "react-icons/fa";
 import logo from "../../assets/images/logo.png";
+import { FaHome } from "react-icons/fa";
+import { FaCog } from "react-icons/fa";
 import "./VideoTranscription.css";
 
 const VideoTranscription = () => {
+  const navigate = useNavigate(); 
+
   return (
     <div className="video-transcription-container">
-      {/* المحتوى الرئيسي */}
+     
       <div className="main-content">
-        {/* شريط البحث */}
+        
         <div className="top-bar">
           <div className="search-container">
             <FaSearch className="search-icon" />
@@ -17,7 +22,7 @@ const VideoTranscription = () => {
           </div>
         </div>
 
-        {/* محتوى الفيديو والتفريغ */}
+      
         <div className="video-card">
           <h2 className="video-title">اسم الفيديو الذي تم تحميله</h2>
           <a
@@ -54,15 +59,15 @@ const VideoTranscription = () => {
         </div>
       </div>
 
-      {/* الشريط الجانبي */}
+     
       <aside className="sidebar">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
-          <a href="#" className="sidebar-link active">الرئيسية</a>
-          <a href="#" className="sidebar-link">الملفات</a>
-          <a href="#" className="sidebar-link">الإعدادات</a>
+          <a onClick={() => navigate("/")} className="sidebar-link active"> <FaHome />الرئيسية </a>
+          <a onClick={() => navigate("/files")} className="sidebar-link">الملفات</a>
+          <a onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الاعدادات</a>
         </nav>
       </aside>
     </div>
