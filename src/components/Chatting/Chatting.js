@@ -34,7 +34,7 @@ const Chatting = () => {
           <a href="#" className="sidebar-link"><FaCog /> الإعدادات</a>
         </nav>
         <div>
-        <button className="add-btn"><FaPlus /> إضافة</button>
+        <button className="add-btn"><FaPlus /> +</button>
         <button className="re-btn"><TiArrowRepeatOutline /></button>
         </div>
       </aside>

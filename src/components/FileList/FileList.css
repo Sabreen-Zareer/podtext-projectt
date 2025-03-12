@@ -1,0 +1,66 @@
+.file-list-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .add-file-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .add-file-button:hover {
+    background-color: #0056b3;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .pending {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .completed {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .actions .icon {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 18px;
+  }
+  
+  .view {
+    color: #17a2b8;
+  }
+  
+  .edit {
+    color: #ffc107;
+  }
+  
+  .delete {
+    color: #dc3545;
+  }
+  
