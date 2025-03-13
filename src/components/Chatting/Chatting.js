@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaSearch, FaHome, FaCog, FaPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { TiArrowRepeatOutline } from "react-icons/ti";
 import "./Chatting.css";
@@ -8,6 +9,7 @@ const Chatting = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const chatRef = useRef(null);
+  const navigate = useNavigate(); 
 
   const sendMessage = () => {
     if (input.trim() !== "") {
@@ -22,6 +24,11 @@ const Chatting = () => {
     }
   }, [messages]);
 
+  // ✅ دالة التنقل لواجهة الملفات
+  const handleFileListClick = () => {
+    navigate("/FileList");
+  };
+
   return (
     <div className="chat-container">
       <aside className="sidebar">
@@ -29,13 +36,13 @@ const Chatting = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
-          <a href="#" className="sidebar-link active"><FaHome /> الرئيسية</a>
-          <a href="#" className="sidebar-link active">الملفات</a>
-          <a href="#" className="sidebar-link"><FaCog /> الإعدادات</a>
+          <a onClick={() => navigate("/")} className="sidebar-link"><FaHome /> الرئيسية</a>
+          <a onClick={handleFileListClick} className="sidebar-link">الملفات</a> 
+          <a onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الإعدادات</a>
         </nav>
         <div>
-        <button className="add-btn"><FaPlus /> +</button>
-        <button className="re-btn"><TiArrowRepeatOutline /></button>
+          <button className="add-btn"><FaPlus /> +</button>
+          <button className="re-btn"><TiArrowRepeatOutline /></button>
         </div>
       </aside>
 
