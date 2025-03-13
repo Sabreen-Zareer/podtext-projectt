@@ -12,6 +12,7 @@ import Chatting from './components/Chatting/Chatting';
 import FileUploadModal from './components/FileUploadModal/FileUploadModal';
 import VideoTranscription from './components/VideoTranscription/VideoTranscription';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword'; 
+import FileList from './components/FileList/FileList';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("main");
@@ -48,10 +49,9 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {location.pathname !== "/forgot-password" && location.pathname !== "/login" && location.pathname !== "/signup" && currentPage !== "login" && currentPage !== "signup" && currentPage !== "dashboard" && (
-        <Header setCurrentPage={setCurrentPage} />
-      )}
+    <div className="App" style={{ height: '100vh', overflowY: 'auto' }}>
+      {location.pathname === "/" ? <Header setCurrentPage={setCurrentPage} /> : null}
+
       <Routes>
         <Route path="/" element={renderPage()} />
         <Route path="/login" element={<Login setCurrentPage={setCurrentPage} />} />
@@ -61,6 +61,7 @@ function App() {
         <Route path="/file-upload" element={<FileUploadModal />} />
         <Route path="/video-transcription" element={<VideoTranscription />} />
         <Route path="/forgot-password" element={<ForgotPassword />} /> 
+        <Route path="/FileList" element={<FileList />} />
       </Routes>
     </div>
   );
