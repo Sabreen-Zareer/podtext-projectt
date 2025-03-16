@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom"; 
 import { FaLock, FaEnvelope } from "react-icons/fa";
 import mainImage from "../../assets/images/main-image.png";
 import logo from "../../assets/images/logo.png";
@@ -11,6 +11,7 @@ const LoginContainer = styled.div`
   align-items: center;
   height: 100vh;
   background-color: #f8f9fa;
+  margin-right: 500px;
 `;
 
 const LoginBox = styled.div`
@@ -49,7 +50,7 @@ const InputGroup = styled.div`
   background: #f5f5f5;
   border-radius: 8px;
   padding: 15px;
-  width: 130%;
+  width: 100%;
   margin-bottom: 20px;
 `;
 
@@ -90,12 +91,10 @@ const ForgotPassword = styled(Link)`
   color: #2575fc;
   cursor: pointer;
   text-decoration: none;
- text-align: right;
- margin-left: -50px;
 `;
 
 const LoginButton = styled.button`
-  width: 130%;
+  width: 100%;
   background: #2575fc;
   color: white;
   border: none;
@@ -128,11 +127,13 @@ const Login = ({ setCurrentPage }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Email:", email, "Password:", password, "Remember Me:", rememberMe);
-    setCurrentPage("dashboard"); 
+    // هنا يمكنك إضافة التحقق من صحة تسجيل الدخول
+    navigate("/dashboard"); // التنقل إلى صفحة داشبورد
   };
 
   return (

@@ -7,11 +7,13 @@ const FileList = () => {
   return (
     <div className="container">
       {/* الشريط الجانبي */}
-      <div className="sidebar">
-      <div className="logo-container">
+      <div className="sideba">
+        <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
+          <a>القاائمة</a>
+          <a href="#" className="sidebar-link">🏠 الرئيسية</a>
           <a href="#" className="sidebar-link active">📂 الملفات</a>
           <a href="#" className="sidebar-link">⚙️ الإعدادات</a>
         </nav>
@@ -20,15 +22,30 @@ const FileList = () => {
       {/* المحتوى الرئيسي */}
       <div className="content">
         {/* الشريط العلوي */}
-        <div className="top-bar">
+        <div className="top-ba">
           <div className="search-container">
             <FaSearch className="search-icon" />
             <input type="text" className="search-input" placeholder="بحث عن الملفات..." />
           </div>
         </div>
 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        
+
         {/* عنوان القائمة */}
         <h2 className="table-title">قائمة الملفات</h2>
+
+        <div className="add-file-container">
+          <button className="add-file-button">
+            <FaPlus /> إضافة ملف جديد
+          </button>
+        </div>
 
         {/* جدول الملفات */}
         <table>
@@ -47,7 +64,7 @@ const FileList = () => {
               <td>1</td>
               <td>ملف</td>
               <td>تقني</td>
-              <td className="pending">جاري التسجيل</td>
+              <td className="pending">جاري التحميل</td>
               <td>03/20/2025</td>
               <td className="actions">
                 <FaEye className="icon view" />
@@ -59,7 +76,7 @@ const FileList = () => {
               <td>2</td>
               <td>ملف</td>
               <td>ترفيهي</td>
-              <td className="completed">تم التسجيل</td>
+              <td className="completed">تم التحميل</td>
               <td>03/20/2025</td>
               <td className="actions">
                 <FaEye className="icon view" />
@@ -69,13 +86,6 @@ const FileList = () => {
             </tr>
           </tbody>
         </table>
-
-        {/* زر الإضافة في الأسفل */}
-        <div className="add-file-container">
-          <button className="add-file-button">
-            <FaPlus /> إضافة ملف جديد
-          </button>
-        </div>
       </div>
     </div>
   );

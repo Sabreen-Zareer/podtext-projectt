@@ -14,7 +14,7 @@ body {
 }
 
 /* الشريط الجانبي */
-.sidebar {
+.sideba {
     width: 250px;
     background: #012970;
     color: white;
@@ -23,9 +23,10 @@ body {
     align-items: center;
     padding: 20px;
     position: fixed;
-    right: 0;
+    right: 10px;
     top: 0;
     height: 100vh;
+    border-radius: 10px 0 0 10px;
 }
 
 /* شعار التطبيق */
@@ -40,17 +41,7 @@ body {
     margin-bottom: 10px;
 }
 
-.sidebar-title {
-    font-size: 22px;
-    font-weight: bold;
-}
-
 /* القائمة الجانبية */
-.sidebar-menu {
-    width: 100%;
-    margin-top: 20px;
-}
-
 .sidebar-nav {
     display: flex;
     flex-direction: column;
@@ -68,6 +59,7 @@ body {
     border-radius: 5px;
     margin-bottom: 5px;
     transition: 0.3s;
+    padding-right: 15px;
 }
 
 .sidebar-link.active {
@@ -78,26 +70,26 @@ body {
 .content {
     flex-grow: 1;
     padding: 20px;
-    margin-right: 250px;
-    width: calc(100% - 250px);
+    margin-right: 270px;
+    width: calc(100% - 270px);
     text-align: center;
-    margin-top: 100px; /* لإزاحة المحتوى للأسفل */
+    margin-top: 80px;
 }
 
 /* الشريط العلوي */
-.top-bar {
+.top-ba {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 60px; /* ارتفاع الشريط العلوي */
+    height: 60px;
     background: white;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
-    top: 100px; /* إزاحة للأسفل */
+    top: 80px;
     left: 0;
-    right: 250px; /* مراعاة الشريط الجانبي */
+    right: 270px;
     z-index: 1000;
 }
 
@@ -127,73 +119,18 @@ body {
     margin-left: 10px;
 }
 
-/* عنوان القائمة */
-.table-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-}
 
-/* جدول الملفات */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-}
-
-.pending {
-    color: red;
-    font-weight: bold;
-}
-
-.completed {
-    color: green;
-    font-weight: bold;
-}
-
-/* أيقونات العمليات */
-.actions .icon {
-    cursor: pointer;
-    margin: 0 5px;
-    font-size: 18px;
-}
-
-.view {
-    color: #17a2b8;
-}
-
-.edit {
-    color: #ffc107;
-}
-
-.delete {
-    color: #dc3545;
-}
-
-/* زر الإضافة في الأسفل بمحاذاة اليسار */
 .add-file-container {
-    margin-top: 20px;
     display: flex;
-    justify-content: flex-start; /* محاذاة لليسار */
-    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
+/* زر الإضافة */
 .add-file-button {
     background-color: #0056b3;
+    margin-right: auto;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -209,4 +146,78 @@ th {
 
 .add-file-button:hover {
     background-color: #004494;
+}
+
+/* عنوان القائمة */
+.table-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* تكبير حجم الجدول */
+table {
+    width: 100%; /* زيادة عرض الجدول */
+    max-width: 1200px; /* تحديد حد أقصى لحجم الجدول */
+    margin: 0 auto; /* توسيطه داخل الصفحة */
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 20px; /* تكبير حجم الخط */
+}
+
+/* تعديل تنسيق رأس الجدول */
+th {
+    background-color: #012970;
+    color: white;
+    white-space: nowrap;
+    font-size: 15px; /* تكبير حجم خط العناوين */
+    padding: 15px; /* زيادة التباعد داخل الخلايا */
+}
+
+/* تعديل تنسيق الصفوف */
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px; /* تكبير المسافة داخل الخلايا */
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* زيادة ارتفاع الصفوف */
+tr {
+    height: 60px; /* زيادة ارتفاع كل صف */
+}
+
+/* تحسين ألوان الحالة */
+.pending {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.completed {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* أيقونات العمليات */
+.actions .icon {
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 20px; /* تكبير الأيقونات */
+}
+
+.view {
+    color: #17a2b8;
+}
+
+.edit {
+    color: #ffc107;
+}
+
+.delete {
+    color: #dc3545;
 }

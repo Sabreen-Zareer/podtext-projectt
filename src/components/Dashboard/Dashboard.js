@@ -30,7 +30,9 @@ const Dashboard = () => {
   const handlevideoClick = () => {
     navigate("/VideoTranscription");
   };
-
+  const handleFileClick = () => {
+    navigate("/FileList");
+  };
   return (
     <div className="dashboard-container">
       <div className="sidebar">
@@ -39,7 +41,7 @@ const Dashboard = () => {
         </div>
         <ul>
           <li className="active">الرئيسية</li>
-          <li>الملفات</li>
+          <li onClick={handleFileClick}>الملفات</li>
           <li>الإعدادات</li>
           <li onClick={handleChatClick}>الشات</li>
           <li onClick={handlevideoClick}>التلخيص</li>
@@ -55,10 +57,14 @@ const Dashboard = () => {
             <input type="text" placeholder="ابحث عن ..." className="search-box" />
           </div>
         </div>
+        <br />
+        <br />
         <div className="stats">
           <img src={nisba} alt="إجمالي عدد الصم" className="stat-image" />
           <img src={nsba} alt="إجمالي عدد المتعلمين" className="stat-image" />
         </div>
+        <br />
+        <br />
         <div className="chart-container">
           <img src={avg} alt="توزيع الأفراد ذوي الإعاقة حسب الجنس" className="chart-image" />
         </div>

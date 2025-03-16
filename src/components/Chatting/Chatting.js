@@ -24,20 +24,21 @@ const Chatting = () => {
     }
   }, [messages]);
 
-  // ✅ دالة التنقل لواجهة الملفات
+  
   const handleFileListClick = () => {
     navigate("/FileList");
   };
 
   return (
     <div className="chat-container">
-      <aside className="sidebar">
+      <aside className="sidebarr">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
+          <a>القائمة</a>
           <a onClick={() => navigate("/")} className="sidebar-link"><FaHome /> الرئيسية</a>
-          <a onClick={handleFileListClick} className="sidebar-link">الملفات</a> 
+          <a onClick={handleFileListClick} className="sidebar-link">📂 الملفات</a> 
           <a onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الإعدادات</a>
         </nav>
         <div>
@@ -47,7 +48,7 @@ const Chatting = () => {
       </aside>
 
       <div className="main-content">
-        <div className="top-bar">
+        <div className="top-barr">
           <div className="search-container">
             <FaSearch className="search-icon" />
             <input type="text" placeholder="بحث عن..." className="search-input" />

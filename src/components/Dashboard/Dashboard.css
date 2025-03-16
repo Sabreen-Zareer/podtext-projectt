@@ -1,7 +1,7 @@
 .dashboard-container {
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 150vw;
   background-color: #ecf0f1;
  
 }
@@ -73,15 +73,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1250px;
-  margin-right: 345px;
-  margin-top: -50px;
+  max-width:  1750px;
+  margin-right: -355px;
+  margin-top: 20px;
+  width: 10000000px;
+  padding: 20px;
+  
 }
 
 .search-container {
   display: flex;
   align-items: left;
-  width: 175px;
+  width: 235px;
   justify-content:space-between;
 }
 
