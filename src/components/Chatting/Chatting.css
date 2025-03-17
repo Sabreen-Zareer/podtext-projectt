@@ -15,7 +15,6 @@ body {
 
 /* الشريط الجانبي */
 .sidebarr {
-  
   min-width: 250px;
   height: 100vh;
   background: #012970;
@@ -201,6 +200,7 @@ body {
   border-top-left-radius: 0;
 }
 
+/* تحسين مربع الإدخال وزر الإرسال */
 .input-box {
   display: flex;
   width: 90%;
@@ -208,33 +208,38 @@ body {
   margin-top: 15px;
   border-radius: 30px;
   background: white;
-  padding: 8px;
+  padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: space-between;
+  border: 2px solid #012970; /* إضافة إطار */
 }
 
 .chat-input {
   flex-grow: 1;
-  padding: 12px;
+  padding: 15px;
   border: none;
   border-radius: 30px;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
+  min-height: 40px; /* ضمان ظهوره */
+  color: black;
+  background-color: white;
 }
 
 .send-btn {
   background: #012970;
   color: white;
   border: none;
-  padding: 12px 18px;
+  padding: 15px 20px;
   margin-left: 8px;
-  border-radius: 50%;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
   font-size: 18px;
 }
 
 .send-btn:hover {
   background: #014a9c;
+  transform: scale(1.1); /* تأثير عند التمرير */
 }

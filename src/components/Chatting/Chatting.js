@@ -1,21 +1,34 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaSearch, FaHome, FaCog, FaPlus } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 import { TiArrowRepeatOutline } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import logo from "../../assets/images/logo.png";
 import "./Chatting.css";
 
 const Chatting = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const chatRef = useRef(null);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
-  const sendMessage = () => {
-    if (input.trim() !== "") {
-      setMessages([...messages, { text: input, sender: "user" }]);
-      setInput("");
+  const sendMessage = async () => {
+    if (!input.trim()) return;
+
+    const userMessage = { text: input, sender: "user" };
+    setMessages((prev) => [...prev, userMessage]);
+
+    try {
+      const res = await axios.post("http://localhost:5000/chat", {
+        message: input,
+      });
+      const botMessage = { text: res.data.reply, sender: "bot" };
+      setMessages((prev) => [...prev, botMessage]);
+    } catch (error) {
+      console.error("Error:", error);
     }
+
+    setInput("");
   };
 
   useEffect(() => {
@@ -24,7 +37,6 @@ const Chatting = () => {
     }
   }, [messages]);
 
-  
   const handleFileListClick = () => {
     navigate("/FileList");
   };
@@ -35,10 +47,10 @@ const Chatting = () => {
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
         </div>
-        <nav className="sidebar-nav">
+        <nav className="sidebarr-nav">
           <a>القائمة</a>
           <a onClick={() => navigate("/")} className="sidebar-link"><FaHome /> الرئيسية</a>
-          <a onClick={handleFileListClick} className="sidebar-link">📂 الملفات</a> 
+          <a onClick={handleFileListClick} className="sidebar-link">📂 الملفات</a>
           <a onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الإعدادات</a>
         </nav>
         <div>
@@ -65,7 +77,7 @@ const Chatting = () => {
           <div className="messages-box" ref={chatRef}>
             {messages.map((msg, index) => (
               <div key={index} className={`message ${msg.sender === "user" ? "user-message" : "bot-message"}`}>
-                {msg.text}
+                <strong>{msg.sender === "user" ? "أنت" : "الذكاء الاصطناعي"}:</strong> {msg.text}
               </div>
             ))}
           </div>
