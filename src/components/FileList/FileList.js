@@ -12,10 +12,10 @@ const FileList = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
-          <a>القاائمة</a>
-          <a href="#" className="sidebar-link">🏠 الرئيسية</a>
-          <a href="#" className="sidebar-link active">📂 الملفات</a>
-          <a href="#" className="sidebar-link">⚙️ الإعدادات</a>
+          <button>القاائمة</button>
+          <button href="#" className="sidebar-link">🏠 الرئيسية</button>
+          <button href="#" className="sidebar-link active">📂 الملفات</button>
+          <button href="#" className="sidebar-link">⚙️ الإعدادات</button>
         </nav>
       </div>
 

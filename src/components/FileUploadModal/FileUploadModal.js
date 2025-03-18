@@ -48,9 +48,9 @@ export default function FileUploadModal() {
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebar-nav">
-          <a href="#" className="sidebar-link active">الرئيسية</a>
-          <a href="#" className="sidebar-link">الملفات</a>
-          <a href="#" className="sidebar-link">الإعدادات</a>
+          <button href="#" className="sidebar-link active">الرئيسية</button>
+          <button href="#" className="sidebar-link">الملفات</button>
+          <button href="#" className="sidebar-link">الإعدادات</button>
         </nav>
       </aside>
     </div>

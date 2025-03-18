@@ -48,10 +48,10 @@ const Chatting = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
         <nav className="sidebarr-nav">
-          <a>القائمة</a>
-          <a onClick={() => navigate("/")} className="sidebar-link"><FaHome /> الرئيسية</a>
-          <a onClick={handleFileListClick} className="sidebar-link">📂 الملفات</a>
-          <a onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الإعدادات</a>
+          <button>القائمة</button>
+          <button onClick={() => navigate("/")} className="sidebar-link"><FaHome /> الرئيسية</button>
+          <button onClick={handleFileListClick} className="sidebar-link">📂 الملفات</button>
+          <button onClick={() => navigate("/settings")} className="sidebar-link"><FaCog /> الإعدادات</button>
         </nav>
         <div>
           <button className="add-btn"><FaPlus /> +</button>
